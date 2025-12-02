@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Prompt Builder - Create Viral Content</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>AI Video Prompt Builder</h1>
+            <p class="subtitle">Psychology-backed prompt engineering for viral video content</p>
+        </header>
+
+        <!-- Experience Level Selection -->
+        <section id="experience-section" class="section">
+            <h2>Choose Your Experience Level</h2>
+            <div class="experience-grid">
+                <div class="experience-card" data-level="beginner">
+                    <h3>Beginner</h3>
+                    <p>Step-by-step guidance with extensive explanations</p>
+                    <ul>
+                        <li>Detailed tooltips &amp; education</li>
+                        <li>Psychology explanations</li>
+                        <li>Common mistake prevention</li>
+                    </ul>
+                </div>
+                <div class="experience-card" data-level="intermediate">
+                    <h3>Intermediate</h3>
+                    <p>Balanced guidance with customization options</p>
+                    <ul>
+                        <li>Moderate assistance</li>
+                        <li>Some advanced features</li>
+                        <li>A/B testing suggestions</li>
+                    </ul>
+                </div>
+                <div class="experience-card" data-level="advanced">
+                    <h3>Advanced</h3>
+                    <p>Full control with analytics integration</p>
+                    <ul>
+                        <li>Complete customization</li>
+                        <li>Analytics insights</li>
+                        <li>Batch optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Selection -->
+        <section id="platform-section" class="section hidden">
+            <h2>Select Target Platform</h2>
+            <div class="platform-grid">
+                <div class="platform-card" data-platform="tiktok">
+                    <h3>TikTok</h3>
+                    <div class="platform-specs">
+                        <span class="spec">15-30 seconds</span>
+                        <span class="spec">3-second hook</span>
+                        <span class="spec">Trend-focused</span>
+                    </div>
+                    <p>Authentic, relatable content with quick emotional hooks</p>
+                </div>
+                <div class="platform-card" data-platform="youtube">
+                    <h3>YouTube Shorts</h3>
+                    <div class="platform-specs">
+                        <span class="spec">Up to 60 seconds</span>
+                        <span class="spec">5-8 second hook</span>
+                        <span class="spec">Educational focus</span>
+                    </div>
+                    <p>Educational value with retention optimization</p>
+                </div>
+                <div class="platform-card" data-platform="instagram">
+                    <h3>Instagram Reels</h3>
+                    <div class="platform-specs">
+                        <span class="spec">15-90 seconds</span>
+                        <span class="spec">3-5 second hook</span>
+                        <span class="spec">Aesthetic focus</span>
+                    </div>
+                    <p>Visually striking, brand-consistent content</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prompt Builder -->
+        <section id="builder-section" class="section hidden">
+            <div class="builder-layout">
+                <!-- Left Panel: Form -->
+                <div class="builder-form">
+                    <h2>Build Your Viral Prompt</h2>
+                    
+                    <!-- Progress Indicator -->
+                    <div class="progress-bar">
+                        <div class="progress-step active" data-step="1">1. Hook</div>
+                        <div class="progress-step" data-step="2">2. Structure</div>
+                        <div class="progress-step" data-step="3">3. Details</div>
+                        <div class="progress-step" data-step="4">4. Generate</div>
+                    </div>
+
+                    <!-- Step 1: Emotional Hook -->
+                    <div class="form-step active" data-step="1">
+                        <h3>Choose Your Emotional Hook</h3>
+                        <div class="hook-categories">
+                            <div class="hook-category" data-emotion="awe">
+                                <h4>Awe <span class="info-icon" data-tooltip="Creates wonder and amazement - drives sharing behavior">?</span></h4>
+                                <select id="awe-hooks" class="form-control">
+                                    <option value="">Select an awe hook...</option>
+                                </select>
+                            </div>
+                            <div class="hook-category" data-emotion="curiosity">
+                                <h4>Curiosity <span class="info-icon" data-tooltip="Triggers information gap - increases watch time">?</span></h4>
+                                <select id="curiosity-hooks" class="form-control">
+                                    <option value="">Select a curiosity hook...</option>
+                                </select>
+                            </div>
+                            <div class="hook-category" data-emotion="shock">
+                                <h4>Shock <span class="info-icon" data-tooltip="Pattern interrupt - stops scrolling behavior">?</span></h4>
+                                <select id="shock-hooks" class="form-control">
+                                    <option value="">Select a shock hook...</option>
+                                </select>
+                            </div>
+                            <div class="hook-category" data-emotion="transformation">
+                                <h4>Transformation <span class="info-icon" data-tooltip="Shows journey/progress - highly engaging">?</span></h4>
+                                <select id="transformation-hooks" class="form-control">
+                                    <option value="">Select a transformation hook...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary" onclick="nextStep()">Next: Structure</button>
+                    </div>
+
+                    <!-- Step 2: Core Structure -->
+                    <div class="form-step" data-step="2">
+                        <h3>Define Core Elements</h3>
+                        <div class="structure-grid">
+                            <div class="form-group">
+                                <label class="form-label">Shot Type <span class="info-icon" data-tooltip="Determines viewer perspective and emotional connection">?</span></label>
+                                <select id="shot-type" class="form-control">
+                                    <option value="">Choose shot type...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Subject <span class="info-icon" data-tooltip="Main focus of your video - choose relatable subjects">?</span></label>
+                                <select id="subject" class="form-control">
+                                    <option value="">Select subject...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Action <span class="info-icon" data-tooltip="Keep to ONE action to avoid AI confusion">?</span></label>
+                                <select id="action" class="form-control">
+                                    <option value="">Choose action...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button class="btn btn--outline" onclick="prevStep()">Previous</button>
+                            <button class="btn btn--primary" onclick="nextStep()">Next: Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Style &amp; Atmosphere -->
+                    <div class="form-step" data-step="3">
+                        <h3>Style &amp; Atmosphere</h3>
+                        <div class="style-grid">
+                            <div class="form-group">
+                                <label class="form-label">Setting/Era <span class="info-icon" data-tooltip="Visual context that enhances your story">?</span></label>
+                                <select id="setting" class="form-control">
+                                    <option value="">Select setting...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Camera Movement <span class="info-icon" data-tooltip="Adds cinematic quality and visual interest">?</span></label>
+                                <select id="camera-movement" class="form-control">
+                                    <option value="">Choose movement...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Audio Style <span class="info-icon" data-tooltip="Sound creates emotional atmosphere">?</span></label>
+                                <select id="audio" class="form-control">
+                                    <option value="">Select audio style...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button class="btn btn--outline" onclick="prevStep()">Previous</button>
+                            <button class="btn btn--primary" onclick="nextStep()">Generate Prompts</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Generation Options -->
+                    <div class="form-step" data-step="4">
+                        <h3>Generation Options</h3>
+                        <div class="generation-options">
+                            <div class="form-group">
+                                <label class="form-label">Number of Variations</label>
+                                <select id="variation-count" class="form-control">
+                                    <option value="4">4 variations</option>
+                                    <option value="8" selected>8 variations (recommended)</option>
+                                    <option value="12">12 variations</option>
+                                </select>
+                            </div>
+                            <div class="education-panel">
+                                <h4>Why Generate Multiple Variations?</h4>
+                                <p>Successful creators test 8-12 variations of the same concept. This approach beats perfectionism because:</p>
+                                <ul>
+                                    <li>Different audiences respond to different hooks</li>
+                                    <li>You can A/B test to find winners</li>
+                                    <li>Volume + selection &gt; perfect single attempt</li>
+                                    <li>AI provides diverse creative angles you might miss</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button class="btn btn--outline" onclick="prevStep()">Previous</button>
+                            <button class="btn btn--primary" onclick="generatePrompts()">Generate Prompts</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Preview &amp; Education -->
+                <div class="builder-preview">
+                    <div class="preview-card">
+                        <h3>Live Preview</h3>
+                        <div id="prompt-preview" class="prompt-preview">
+                            <p class="preview-placeholder">Your prompt will appear here as you make selections...</p>
+                        </div>
+                        <div id="platform-tips" class="platform-tips">
+                            <!-- Platform-specific tips will be populated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="psychology-panel">
+                        <h3>Psychology Behind This Choice</h3>
+                        <div id="psychology-explanation" class="psychology-content">
+                            <p>Make selections above to see the psychological principles at work...</p>
+                        </div>
+                    </div>
+
+                    <div class="common-mistakes">
+                        <h3>Avoid These Mistakes</h3>
+                        <div class="mistake-list">
+                            <div class="mistake-item">
+                                <strong>Too many actions:</strong> Keep to ONE clear action per prompt
+                            </div>
+                            <div class="mistake-item">
+                                <strong>Wrong word order:</strong> Most important elements go first
+                            </div>
+                            <div class="mistake-item">
+                                <strong>Fighting AI style:</strong> Embrace stylized over photorealistic
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="section hidden">
+            <h2>Your Generated Prompts</h2>
+            <div class="results-header">
+                <p>Here are your AI video prompts optimized for <span id="selected-platform"></span>. Test multiple variations to find your winners!</p>
+                <div class="results-actions">
+                    <button class="btn btn--outline" onclick="generateMore()">Generate More Variations</button>
+                    <button class="btn btn--secondary" onclick="exportPrompts()">Export All Prompts</button>
+                </div>
+            </div>
+            <div id="prompt-results" class="prompt-grid">
+                <!-- Generated prompts will appear here -->
+            </div>
+            
+            <div class="business-tips">
+                <h3>Next Steps: From Prompts to Profit</h3>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <h4>Testing Strategy</h4>
+                        <p>Post 3-4 variations across different times/days. Track which hooks get the best retention in the first 3 seconds.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Analytics Focus</h4>
+                        <p>Watch for: View-to-engagement ratio, retention graphs, scroll-through rates, and share-to-view ratios.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Monetization</h4>
+                        <p>Successful viral content can drive sponsorships, affiliate sales, course launches, and brand partnerships.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Saved Prompts -->
+        <section id="saved-section" class="section hidden">
+            <h2>Saved Successful Prompts</h2>
+            <div id="saved-prompts" class="saved-grid">
+                <!-- Saved prompts will appear here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip hidden"></div>
+
+    <!-- Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-btn" onclick="showSection('builder-section')" disabled>Builder</button>
+        <button class="nav-btn" onclick="showSection('results-section')" disabled>Results</button>
+        <button class="nav-btn" onclick="showSection('saved-section')">Saved</button>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
